@@ -1,0 +1,36 @@
+<!DOCTYPE html5>
+<html lang="en">
+
+<head>
+    <title>angular</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./build/css/index.css">
+</head>
+
+<body ng-app="myApp">
+    <script type="text/ng-template" id="login.html">
+        <div ng-controller="LoginCtrl">
+            <input placeholder="name" ng-model="name" />
+            <input placeholder="password" type="password" ng-model="password" />
+            <button ng-click="login()">登陆</button>
+            <a ng-href="#/regist">没有账号？注册</a>
+        </div>
+    </script>
+
+    <script type=" text/ng-template " id="regist.html ">
+        <div ng-controller="RegistCtrl ">
+            <h4>请注册 <small> <a href="#/login ">返回登陆</a></small></h4>
+            <input placeholder="name " ng-model="name " />
+            <input placeholder="password " type="password " ng-model="password " />
+            <button>注册</button>
+        </div>
+    </script>
+
+    <div ng-view></div>
+    <script src="./angular-1.2.30/angular.js "></script>
+    <script src="./angular-1.2.30/angular-route.js "></script>
+    <script src="./build/js/main.js "></script>
+</body>
+
+</html>
