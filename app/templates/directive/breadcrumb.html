@@ -1,0 +1,6 @@
+<div class="breadcrumb-box">
+    <span ng-repeat="item in items">
+        {{item}}
+        <span ng-if="items.length !== $index + 1">&gt;</span>
+    </span>
+</div>

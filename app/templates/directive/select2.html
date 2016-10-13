@@ -1,0 +1,9 @@
+<div class="select-wrapper" ng-class="{open:isOpen}">
+    <div class="select-wrapper-display" ng-click="toggle()">
+        <!--<input type="text" placeholder="请选择..." value="{{displayText}}" />-->
+        <div>{{displayText}}</div>
+    </div>
+    <div class="select-wrapper-dropdown" ng-show="isOpen">
+        <div class="select-wrapper-dropdown-item" ng-class="{selected:o.value === value}" ng-click="select(o.value)" ng-repeat="o in options">{{o.text}}</div>
+    </div>
+</div>

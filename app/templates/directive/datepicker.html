@@ -1,0 +1,37 @@
+<div class="datepicker-wrapper" ng-class="{open:isOpen}">
+    <div class="datepicker-wrapper-display" ng-click="toggle()">
+        <!--<input type="text" placeholder="请选择..." value="{{displayText}}" />-->
+        <div>{{displayText}}</div>
+    </div>
+    <div class="datepicker-wrapper-dropdown" ng-show="isOpen">
+        <div class="datepicker-header">
+            <span class="datepicker-pre" ng-click="pre()">&lt;</span>
+            <span class="datepicker-title" ng-click="innerView()">{{titleShowValue}}</span>
+            <span class="datepicker-next" ng-click="next()">&gt;</span>
+        </div>
+        <div class="datepicker-year-view" ng-show="currentView === 2">
+            <span class="item" ng-class="{active:item.active,disabled:item.disabled}" ng-click="!item.disabled&&setYear($event, item.t)" ng-repeat="item in yearViewItems">{{item.t}}</span>
+        </div>
+        <div class="datepicker-month-view" ng-show="currentView === 1">
+            <span class="item" ng-class="{active:item.active,disabled:item.disabled}" ng-click="!item.disabled&&setMonth($event,item.t-1)" ng-repeat="item in monthViewItems">{{item.t}}月</span>
+        </div>
+        <div class="datepicker-date-view" ng-show="currentView === 0">
+            <span class="title">日</span>
+            <span class="title">一</span>
+            <span class="title">二</span>
+            <span class="title">三</span>
+            <span class="title">四</span>
+            <span class="title">五</span>
+            <span class="title">六</span>
+            <span class="item" ng-click="!item.disabled&&setDate(item.month,item.t)" ng-class="{lighter:!item.thisMonth,active:item.active,disabled:item.disabled}" ng-repeat="item in dateViewItems track by $index">{{item.t}}</span>
+        </div>
+        <div class="date-picker-footer">
+            <a href="javascript:;" class="" ng-click="today()">
+                    今天
+                </a>
+            <a href="javascript:;" class="text-red" ng-click="clear()">
+                    清除
+                </a>
+        </div>
+    </div>
+</div>

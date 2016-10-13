@@ -1,0 +1,30 @@
+html,
+body {
+    font-size: 14px;
+    font-family: 'Microsoft Yahei', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #666;
+    word-break: break-all;
+    background: $background-color;
+    min-width: 1200px;
+    line-height: (20px / 14px);
+}
+
+input,
+textarea,
+keygen,
+select,
+button {
+    font-family: 'Microsoft Yahei', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: $color-blue;
+    &:hover {
+        color: darken($color-blue, 10%);
+    }
+}

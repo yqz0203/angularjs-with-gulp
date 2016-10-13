@@ -6,10 +6,10 @@
 (function() {
     'use strict'
 
-    angular.module('myApp.controller.regist', [])
-        .controller('RegistCtrl', function($scope) {
+    angular.module('ct.controller.regist', [])
+        .controller('RegistCtrl', ['$scope', function($scope) {
             $scope.name = '';
             $scope.password = '';
-        });
+        }]);
 
 })();

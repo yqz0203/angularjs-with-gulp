@@ -1,0 +1,31 @@
+ // Usage: 面板
+ //
+ // Creates:杨骐彰 2016/9/8
+ //
+ $panel-border-color:$border-color;
+ .panel {
+     border: solid 1px $panel-border-color;
+ }
+ 
+ .panel-header {
+     height: 40px;
+     line-height: 20px;
+     padding: 10px 10px;
+     background-color: $background-color-darker-1;
+     color: #333;
+ }
+ 
+ .panel-title {
+     float: left;
+     height: 100%;
+ }
+ 
+ .panel-toolbox {
+     float: right;
+ }
+ 
+ 
+ .panel-body {
+     border-top: solid 1px $panel-border-color;
+     overflow: auto;
+ }

@@ -1,0 +1,94 @@
+//Usage:表格样式
+//
+//Created:杨骐彰 2016/9/8
+$table-border-color:$border-color;
+.table {
+    width: 100%;
+    font-size: inherit;
+    th,
+    td {
+        line-height: 20px;
+        padding: (36px - 20px) /2 10px;
+        border: solid 1px $table-border-color;
+        background: $background-color;
+        box-sizing: content-box;
+    }
+    th {
+        font-weight: 500;
+        color: #333;
+        text-align: left;
+        &.first {
+            border-left: none\0;
+            border-top: none\0;
+        }
+        &:first-of-type {
+            border-left: none;
+            border-top: none;
+        }
+        &.last {
+            border-right: none\0;
+            border-top: none\0;
+        }
+        &:last-of-type {
+            border-right: none;
+            border-top: none;
+        }
+    }
+    td {
+        text-align: left;
+        color: #666;
+        &:first-of-type {
+            border-left: none;
+            border-bottom: none;
+        }
+        &.first {
+            border-left: none\0;
+            border-bottom: none\0;
+        }
+        &:last-of-type {
+            border-right: none;
+            border-top: none;
+        }
+        &.last {
+            border-right: none\0;
+            border-top: none\0;
+        }
+    }
+    tr:first-of-type {
+        th {
+            border-top: none;
+        }
+    }
+    tr.first {
+        th {
+            border-top: none\0;
+        }
+    }
+    tr:last-of-type {
+        td {
+            border-bottom: none;
+        }
+    }
+    tr.last {
+        td {
+            border-bottom: none\0;
+        }
+    }
+    .table-operate + .table-operate {
+        margin-left: 20px;
+    }
+    &.table-form {
+        th,
+        td {
+            border: none !important;
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 20px;
+        }
+        .form-c {
+            display: block;
+            width: 100%;
+            
+        }
+    }
+}

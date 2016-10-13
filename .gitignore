@@ -52,4 +52,5 @@ Temporary Items
 .vscode
 \bower_modules
 \angular-1.2.30
-
+\build
+npm-debug.log.*

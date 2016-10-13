@@ -1,0 +1,16 @@
+ // Usage: 页面工具栏
+ //
+ // Creates:杨骐彰 2016/9/8
+ //
+ .search-toolbox {
+     padding-bottom: 8px;
+     >.search-toolbox-label {
+         float: left;
+         width: 100px;
+         margin-top: 7px;
+     }
+     >.search-toolbox-form {
+         margin-left: 100px;
+     }
+     background: url('../images/divider.png') repeat-x bottom;
+ }

@@ -1,0 +1,32 @@
+$off-size:20px;
+.off-t {
+    margin-top: $off-size;
+}
+
+.off-t-s {
+    margin-top: $off-size / 2;
+}
+
+.off-b {
+    margin-bottom: $off-size;
+}
+
+.off-b-s {
+    margin-bottom: $off-size / 2;
+}
+
+.off-l {
+    margin-left: $off-size;
+}
+
+.off-l-s {
+    margin-left: $off-size / 2;
+}
+
+.off-r {
+    margin-right: $off-size;
+}
+
+.off-r-s {
+    margin-right: $off-size / 2;
+}

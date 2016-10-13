@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('myApp.filters', [])
+        .module('ct.filters', [])
         .filter('become1', become1);
 
     function become1() {

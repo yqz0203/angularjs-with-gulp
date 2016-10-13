@@ -1,21 +1,42 @@
 {
-    "name": "angular-webpack-test",
-    "version": "1.0.0",
+    "name": "angular-gulp-starter",
+    "version": "1.0.1",
     "description": "",
     "main": "app.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "gulp dev"
+        "dev": "nodemon --exec \"gulp dev\" --watch gulpfile.js",
+        "prod": "cross-env debug='*,-not_this' gulp prod"
     },
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "angular": "^1.2.30",
+        "angular-mocks": "^1.2.30",
         "browser-sync": "^2.14.3",
+        "cross-env": "^2.0.1",
+        "debug": "^2.2.0",
         "gulp": "^3.9.1",
+        "gulp-angular-templatecache": "^2.0.0",
+        "gulp-clean": "^0.3.2",
         "gulp-clean-css": "^2.0.12",
         "gulp-concat": "^2.6.0",
         "gulp-rename": "^1.2.2",
         "gulp-sass": "^2.3.2",
-        "gulp-uglify": "^2.0.0"
+        "gulp-sourcemaps": "^1.6.0",
+        "gulp-uglify": "^2.0.0",
+        "gulp.spritesmith": "^6.2.1",
+        "http-proxy-middleware": "^0.17.2",
+        "jasmine-core": "^2.5.2",
+        "karma": "^1.3.0",
+        "karma-chrome-launcher": "^2.0.0",
+        "karma-firefox-launcher": "^1.0.0",
+        "karma-ie-launcher": "^1.0.0",
+        "karma-jasmine": "^1.0.2",
+        "merge-stream": "^1.0.0",
+        "nodemon": "^1.11.0"
+    },
+    "dependencies": {
+        "normalize.scss": "^0.1.0"
     }
 }

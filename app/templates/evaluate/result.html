@@ -1,0 +1,83 @@
+<breadcrumb breadcrumb-data="['查询结果']"></breadcrumb>
+<div wrapper-content>
+    <div class="search-toolbox">
+        <label class="search-toolbox-label">查询条件</label>
+        <div class="search-toolbox-form">
+            <div class="form-g">
+                <label class="label">姓名：</label>
+                <input class="form-c" ng-model="searchParams.name" />
+            </div>
+            <div class="form-g">
+                <label class="label">人员选择：</label>
+                <select2 select2-value="searchParams.people" select2-options="[{text:'董事长',value:1},{text:'秘书',value:2}]"></select2>
+            </div>
+            <div class="form-g">
+                <label class="label">素质评测状态：</label>
+                <select2 select2-value="searchParams.state" select2-options="[{text:'未评测',value:1},{text:'已评测',value:2}]"></select2>
+            </div>
+            <div class="form-g">
+                <label class="label">评测日期：</label>
+                <datepicker start-range="2016-9-1" value="searchParams.testTimeBegin"></datepicker>
+                -
+                <datepicker value="searchParams.testTimeEnd"></datepicker>
+            </div>
+            <div class="form-g">
+                <button class="btn btn-fix-size" ng-click="search()">
+                查&nbsp;&nbsp;询
+            </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="off-t">
+        <button class="btn btn-pink">
+                <span class="btn-icon icon-export"></span>
+                导出表格
+            </button>
+    </div>
+    <div class="panel off-t">
+        <div class="panel-header">
+            <div class="panel-toolbox">
+                <a class="text-blue" href="javascript:void();">新增管理员</a>
+            </div>
+        </div>
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                    <tr class="first">
+                        <th class="first">员工编号</th>
+                        <th>员工姓名</th>
+                        <th>中心/事业部/大区/分部</th>
+                        <th>职位</th>
+                        <th class="last">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10234677</td>
+                        <td>罗茜茜</td>
+                        <td>国美集团/集团总部/信息技术副总裁/异地信息中心/产品项目部</td>
+                        <td>产品经理</td>
+                        <td class="last">
+                            <a class="text-pink table-operate" href="javascript:void(0);">查看</a>
+                            <a class="text-red table-operate" href="javascript:void(0);">配置权限</a>
+                            <a class="text-blue table-operate" href="javascript:void(0);">删除</a>
+                        </td>
+                    </tr>
+                    <tr class="last">
+                        <td>10234677</td>
+                        <td>林方书</td>
+                        <td>国美集团/集团总部/信息技术副总裁/异地信息中心/产品项目部</td>
+                        <td>产品经理</td>
+                        <td class="last">
+                            <a class="text-pink table-operate" href="javascript:void(0);">查看</a>
+                            <a class="text-red table-operate" href="javascript:void(0);">配置权限</a>
+                            <a class="text-blue table-operate" href="javascript:void(0);">删除</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+ // Usage: 按钮
+ //
+ // Creates:杨骐彰 2016/9/8
+ //
+ $btn-color-default:$color-blue;
+ $btn-color-pink:$color-pink;
+ .btn {
+     background: $btn-color-default;
+     line-height: 20px;
+     border: solid 1px $btn-color-default;
+     border-radius: 2px;
+     color: #fff;
+     padding: (33px - 20px)/2 10px;
+     text-align: center;
+     outline: none;
+     transition: all .3s ease;
+     vertical-align: middle;
+     &:hover {
+         //  background-color: lighten($btn-color-default, 5%);
+     }
+     &:active {
+         background-color: darken($btn-color-default, 8%);
+         border-color: darken($btn-color-default, 8%);
+     }
+     &.btn-pink {
+         background: $btn-color-pink;
+         border-color: $btn-color-pink;
+         &:active {
+             background-color: darken($btn-color-pink, 8%);
+             border-color: darken($btn-color-pink, 8%);
+         }
+     }
+     .btn-icon {
+         display: inline-block;
+         background-repeat: no-repeat;
+         vertical-align: middle;
+         margin-top: -3px;
+         margin-right: 3px;
+     }
+     &.btn-fix-size {
+         min-width: 112px;
+         min-width: 92px\0;
+         min-width: 92px\9\0;
+     }
+ }
+ 
+ .btn+.btn {
+     margin-left: 16px;
+ }

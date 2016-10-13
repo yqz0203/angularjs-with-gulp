@@ -1,0 +1,44 @@
+.text-blue {
+    color: $color-blue;
+    &:hover {
+        color: darken( $color-blue, 10%);
+    }
+}
+
+.text-pink {
+    color: $color-pink;
+    &:hover {
+        color: darken( $color-pink, 10%);
+    }
+}
+
+.text-red {
+    color: $color-red;
+    &:hover {
+        color: darken( $color-red, 10%);
+    }
+}
+
+
+.text-orange {
+    color: $color-orange;
+    &:hover {
+        color: darken( $color-orange, 10%);
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.align-top {
+    vertical-align: top;
+}
+
+.align-middle {
+    vertical-align: middle;
+}
+
+.align-bottom {
+    vertical-align: bottom;
+}

@@ -1,0 +1,71 @@
+<breadcrumb breadcrumb-data="['题库']"></breadcrumb>
+<wrapper-content>
+    <div class="search-toolbox">
+        <div class="form-g">
+            <button class="btn btn-pink" ng-click="showUploadModal(true)">
+                <span class="btn-icon icon-upload"></span>
+                上传题库
+            </button>
+            <button class="btn">
+                 <span class="btn-icon icon-upload"></span>
+                上传计算规则
+            </button>
+        </div>
+    </div>
+
+    <!--上传题库modal-->
+    <div class="modal" ng-class="{show:isShowUploadModal}">
+        <div class="modal-body" style="height:426px;width:640px;margin-left:-320px;margin-top:-213px;">
+            <div class="modal-header">
+                <div class="close" ng-click="showUploadModal(false)">
+
+                    <span class="close-icon"></span> 关闭
+                </div>
+                <div class="modal-title">
+                    上传题目
+                </div>
+            </div>
+            <div class="modal-content">
+                <div class="off-t off-b off-l-s off-r">
+                    <table class="table table-form fs-16">
+                        <tbody>
+                            <tr>
+                                <td style="width:6em">
+                                    <span class="text-orange">
+                                    *
+                                </span>题目名称：
+                                </td>
+                                <td>性格性向测试</td>
+                            </tr>
+                            <tr>
+                                <td class="align-top"><span class="text-orange">
+                                    *
+                                </span>题目描述：</td>
+                                <td>
+                                    <textarea class="form-c" style="height:160px;resize:none;"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-orange">
+                                    *
+                                </span>文件选择：</td>
+                                <td>
+                                    <input class="form-c" style="width:392px; display:inline-block;" />
+                                    <button class="btn btn-pink btn-fix-size">浏&nbsp;&nbsp;览</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center">
+                        <button class="btn btn-fix-size">上&nbsp;&nbsp;传</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--没有数据时提示-->
+    <div class="off-t fs-16 off-l-s">
+        还没有表格数据哦，请先上传题库~
+    </div>
+</wrapper-content>

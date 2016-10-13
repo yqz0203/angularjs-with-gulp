@@ -1,0 +1,28 @@
+<div class="side-panel">
+    <div class="nav-menu-box">
+        <ul class="nav-menu">
+            <li class="nav-sub-menu">
+                <a class="nav-title" href="javascript:;">
+                    <span class="nav-title-icon icon-evaluate"></span>素质测评
+                </a>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a ui-sref="main.evaluate:make" ui-sref-active="active">制作题目</a>
+                    </li>
+                    <li class="nav-item">
+                        <a ui-sref="main.evaluate:settings" ui-sref-active="active">管理员设置</a>
+                    </li>
+                    <li class="nav-item">
+                        <a ui-sref="main.evaluate:personal" ui-sref-active="active">个人评测</a>
+                    </li>
+                    <li class="nav-item">
+                        <a ui-sref="main.evaluate:result" ui-sref-active="active">测评结果查询</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="wrapper-body" ui-view>
+</div>

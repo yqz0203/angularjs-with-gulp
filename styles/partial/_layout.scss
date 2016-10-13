@@ -1,0 +1,29 @@
+ // Usage: 页面布局
+ //
+ // Creates:杨骐彰 2016/9/8
+ //
+ .wrapper {}
+ 
+ .side-panel {
+     position: fixed;
+     left: 0;
+     overflow: hidden;
+     overflow-y: auto;
+     background: #fff;
+     width: 162px;
+     top: 14px;
+     bottom: 0;
+     z-index: 1;    
+ }
+ 
+ .wrapper-body {
+     margin-left: 182px;
+     padding-top: 14px;
+ }
+ 
+ .wrapper-content {
+     background: #fff;
+     .wrapper-padding {
+         padding: 20px;
+     }
+ }

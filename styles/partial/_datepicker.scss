@@ -1,0 +1,179 @@
+.datepicker-wrapper {
+    display: inline-block;
+    height: 30px;
+    border: solid 1px $form-control-border-color;
+    box-sizing: border-box;
+    line-height: 28px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+.datepicker-wrapper-display {
+    height: 100%;
+    padding: 0 10px;
+    padding-right: 40px;
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        right: 10px;
+        top: (28px - 20px)/2;
+        height: 20px;
+        width: 21px;
+        background: url('../images/calendar.png') no-repeat;
+    }
+    >input,
+    >div {
+        border: none;
+        background: transparent;
+        height: 100%;
+        outline: none;
+        box-sizing: border-box;
+        min-width: 188px - 50px - 2px;
+        cursor: pointer;
+    }
+}
+
+.datepicker-wrapper-dropdown {
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    // right: -1px;
+    width: 222px;
+    box-sizing: border-box;
+    border: solid 1px $form-control-border-color;
+    padding: 7px 5px;
+    background: $background-color;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    transition: all .3s ease;
+}
+
+.datepicker-wrapper-dropdown.ng-hide-remove {
+    opacity: 0.3;
+    margin-top: 10px;
+}
+
+.datepicker-wrapper-dropdown.ng-hide-remove-active {
+    opacity: 1;
+    margin-top: 0;
+}
+
+.datepicker-wrapper-dropdown.ng-hide-add {
+    opacity: 1;
+    z-index: 999;
+}
+
+.datepicker-wrapper-dropdown.ng-hide-add-active {
+    opacity: 0;
+}
+
+.datepicker-wrapper.open {
+    z-index: 999;
+}
+
+.datepicker-year-view {
+    word-break: break-all;
+    font-size: 0;
+    >.item {
+        font-size: 14px;
+        padding: 10px 8px;
+        display: inline-block;
+        text-align: center;
+        width: 25%;
+        cursor: pointer;
+        &:hover {
+            background-color: $background-color-darker-1;
+        }
+        &.active {
+            background-color: $background-color-darker-2;
+            color: #fff;
+        }
+        &.disabled {
+            color: #ddd !important;
+            &:hover {
+                background-color: transparent;
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+.datepicker-month-view {
+    @extend .datepicker-year-view;
+}
+
+.datepicker-date-view {
+    @extend .datepicker-year-view;
+    >.item {
+        width: (100% / 7);
+        padding: 1px 3px;
+        &.lighter {
+            color: #999;
+        }
+    }
+    >.title {
+        font-size: 14px;
+        display: inline-block;
+        text-align: center;
+        width: (100% / 7);
+        padding: 4px 4px;
+        font-weight: 700;
+    }
+}
+
+.datepicker-year-view,
+.datepicker-month-view,
+.datepicker-date-view {
+    transition: all .3s ease;
+    &.ng-hide-remove {
+        opacity: 0;
+        transform: scale(.3);
+    }
+    &.ng-hide-remove-active {
+        opacity: 1;
+        transform: scale(1);
+    }
+    &.ng-hide-add {
+        display: none !important;
+    }
+}
+
+.datepicker-header {
+    text-align: center;
+    font-weight: 700;
+    padding: 0 10px;
+}
+
+.datepicker-title {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.datepicker-pre,
+.datepicker-next {
+    display: inline-block;
+    cursor: pointer;
+    &:hover {
+        color: #999;
+    }
+}
+
+.datepicker-pre {
+    float: left;
+}
+
+.datepicker-next {
+    float: right;
+}
+
+.date-picker-footer {
+    text-align: center;
+    >a {
+        &+a {
+            margin-left: 20px;
+        }
+    }
+}
